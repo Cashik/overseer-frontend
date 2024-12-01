@@ -2,12 +2,14 @@ services:
   - type: web
     name: overseer-frontend
     env: node
-    buildCommand: npm install && npm run build
+    buildCommand: npm ci && npm run build
     startCommand: npm start
     envVars:
       - key: NODE_ENV
         value: production
+      - key: PORT
+        value: "8080"
 resources:
   cpu: 1x
-  memory: 512Mi
+  memory: 1Gi
   disk: 1Gi 
