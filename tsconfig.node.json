@@ -7,7 +7,6 @@
     "lib": ["ES2023"],
     "module": "ESNext",
     "skipLibCheck": true,
-    "types": ["node", "vite"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",
