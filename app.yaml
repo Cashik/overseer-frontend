@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: overseer-frontend
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+resources:
+  cpu: 1x
+  memory: 512Mi
+  disk: 1Gi 
