@@ -1,0 +1,23 @@
+{
+  "name": "overseer-frontend",
+  "env": "node",
+  "build": {
+    "env": {
+      "NODE_ENV": "production"
+    },
+    "cmd": "npm install --production=false && npm run build"
+  },
+  "run": {
+    "cmd": "npm start",
+    "env": {
+      "NODE_ENV": "production",
+      "PORT": "8080"
+    }
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
+  ]
+} 
