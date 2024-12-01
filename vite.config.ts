@@ -1,3 +1,5 @@
+/// <reference types="node" />
+
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import svgr from 'vite-plugin-svgr'
@@ -11,6 +13,14 @@ export default defineConfig({
   },
   build: {
     sourcemap: false,
-    minify: true
+    minify: true,
+    // Добавим дополнительные настройки для production сборки
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+        }
+      }
+    }
   }
 })
