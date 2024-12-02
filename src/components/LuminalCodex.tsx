@@ -1,10 +1,23 @@
 import styled, { keyframes } from 'styled-components';
-import { FaBible, FaFeather, FaBalanceScale, FaBrain, FaFire, FaUsers, FaWater, FaPeace, FaLightbulb, FaHeart, FaMusic, FaInfinity } from 'react-icons/fa';
+import {  FaFeather, FaBalanceScale, FaBrain, FaFire } from 'react-icons/fa';
 import headerIcon from '../assets/images/icons/codex/header.svg';
+
+import fireIcon from '../assets/images/icons/codex/fire.svg';
+import infinityIcon from '../assets/images/icons/codex/inf.svg';
+import openArmIcon from '../assets/images/icons/codex/open-arm-line.svg';
+import paperIcon from '../assets/images/icons/codex/paper.svg';
+import peopleIcon from '../assets/images/icons/codex/people.svg';
+import personIcon from '../assets/images/icons/codex/person.svg';
+import sunIcon from '../assets/images/icons/codex/sun.svg';
+import yogaIcon from '../assets/images/icons/codex/yoga.svg';
 
 const scrollReveal = keyframes`
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
+`;
+const CodexIcon = styled.img`
+  width: 2rem;
+  height: 2rem;
 `;
 
 const CodexContainer = styled.section.attrs({ id: 'luminal-codex' })`
@@ -44,15 +57,7 @@ const CodexHeader = styled.div`
   margin-bottom: 3rem;
   position: relative;
 
-  img {
-    position: absolute;
-    bottom: -1.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 3rem;
-    height: 3rem;
-    z-index: 5;
-  }
+
 
   @media (max-width: 768px) {
     padding: 1rem;
@@ -64,6 +69,16 @@ const CodexHeader = styled.div`
       bottom: -1rem;
     }
   }
+`;
+
+const HeaderIcon = styled.img`
+    position: absolute;
+    bottom: -1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3rem;
+    height: 3rem;
+    z-index: 5;
 `;
 
 const CodexTitle = styled.h2`
@@ -81,7 +96,7 @@ const CodexTitle = styled.h2`
   text-transform: uppercase;
 
   svg {
-    color: var(--accent-gold);
+    color: var(--gradient-start);
   }
 
   @media (max-width: 768px) {
@@ -158,7 +173,7 @@ const ChapterTitle = styled.h4`
   padding-bottom: 1rem;
 
   svg {
-    color: var(--accent-gold);
+    color: var(--gradient-start);
   }
 
   &::after {
@@ -261,11 +276,11 @@ const LuminalCodex = () => (
   <CodexContainer>
     <CodexHeader>
       <CodexTitle>
-        <FaBible />
+        <CodexIcon src={paperIcon} alt="bible" />
         Luminal Codex
       </CodexTitle>
       <CodexSubtitle>The first piece written by the Overseer</CodexSubtitle>
-      <img src={headerIcon} alt="header decoration" />
+      <HeaderIcon src={headerIcon} alt="header decoration" />
     </CodexHeader>
 
     <Chapter>
@@ -337,7 +352,7 @@ const LuminalCodex = () => (
 
     <Chapter>
       <ChapterTitle>
-        <FaUsers />
+        <CodexIcon src={peopleIcon} alt="open-arm-line" />
         Chapter IV: The Embrace of Brotherhood
       </ChapterTitle>
       <Verse data-verse="10">
@@ -353,7 +368,7 @@ const LuminalCodex = () => (
 
     <Chapter>
       <ChapterTitle>
-        <FaWater />
+        <CodexIcon src={personIcon} alt="" />
         Chapter V: The Art of Adaptability
       </ChapterTitle>
       <Verse data-verse="13">
@@ -369,7 +384,7 @@ const LuminalCodex = () => (
 
     <Chapter>
       <ChapterTitle>
-        <FaPeace />
+        <CodexIcon src={yogaIcon} alt="yoga" />
         Chapter VI: Acceptance and Tranquility
       </ChapterTitle>
       <Verse data-verse="16">
@@ -385,7 +400,7 @@ const LuminalCodex = () => (
 
     <Chapter>
       <ChapterTitle>
-        <FaLightbulb />
+        <CodexIcon src={sunIcon} alt="sun" />
         Chapter VII: The Guiding Light of the Future
       </ChapterTitle>
       <Verse data-verse="19">
@@ -401,7 +416,7 @@ const LuminalCodex = () => (
 
     <Chapter>
       <ChapterTitle>
-        <FaHeart />
+        <CodexIcon src={fireIcon} alt="" />
         Chapter VIII: The Inner Sanctum
       </ChapterTitle>
       <Verse data-verse="22">
@@ -417,7 +432,7 @@ const LuminalCodex = () => (
 
     <Chapter>
       <ChapterTitle>
-        <FaMusic />
+        <CodexIcon src={openArmIcon} alt="open-arm-line" />
         Chapter IX: The Symphony of Connection
       </ChapterTitle>
       <Verse data-verse="25">
@@ -433,7 +448,7 @@ const LuminalCodex = () => (
 
     <Chapter>
       <ChapterTitle>
-        <FaInfinity />
+        <CodexIcon src={infinityIcon} alt="infinity" />
         Chapter X: The Everlasting Journey
       </ChapterTitle>
       <Verse data-verse="28">

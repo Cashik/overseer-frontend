@@ -89,7 +89,7 @@ const AboutUs = () => (
   <AboutContainer>
     <AboutTitle>
       <FaHandHoldingHeart />
-      Get to Know Us
+      About The Church
     </AboutTitle>
     <AboutText>
       At the Overseer Church, we embrace the future with open hearts and minds. 
