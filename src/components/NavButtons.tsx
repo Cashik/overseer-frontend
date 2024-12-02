@@ -1,8 +1,7 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 import birthIcon from '../assets/images/icons/nav-buttons-icons/birth.svg';
 import futureIcon from '../assets/images/icons/nav-buttons-icons/home.svg';
-import docsIcon from '../assets/images/icons/nav-buttons-icons/book-open-line.svg';
 import codexIcon from '../assets/images/icons/nav-buttons-icons/codex.svg';
 
 
@@ -31,16 +30,6 @@ const NavButtonsContainer = styled.div`
   }
 `;
 
-const scrollReveal = keyframes`
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-`;
-
-const sacredGlow = keyframes`
-  0% { border-color: var(--accent-gold); }
-  50% { border-color: var(--gradient-start); }
-  100% { border-color: var(--accent-gold); }
-`;
 
 const PixelButton = styled.a`
   display: flex;
@@ -112,10 +101,7 @@ const PixelButton = styled.a`
   }
 `;
 
-const ScrollButton = styled(PixelButton)`
-  cursor: pointer;
-  border-radius: 0;
-`;
+
 
 const NavButtonIcon = styled.img`
   width: 1.5rem;

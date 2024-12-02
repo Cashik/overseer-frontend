@@ -1,11 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import styled from 'styled-components';
 import GlobalStyle from './GlobalStyles';
 import { VideoLoader } from './components/VideoLoader';
 import Home from './pages/Home';
 import CodexPage from './pages/CodexPage';
-import { useLoaderStore } from './store/loaderStore';
-import { useEffect } from 'react';
 
 const App = () => {
 
