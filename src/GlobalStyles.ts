@@ -5,6 +5,7 @@ const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=K2D:wght@400;600;700&display=swap');
 
   :root {
+    --active-color: #FFEF99;
     --primary-dark: #000000;
     --primary-light: #1A1A1A;
     --accent-neon: #FFB800;
@@ -12,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
     --gradient-start: #FFD67E;
     --gradient-end: #EFEBBA;
     --text-light: #FFFFFF;
-    --text-secondary: #E6E6E6;
+    --text-secondary: #9C9C9C;
     --text-dark: #000000;
     --glow-effect: 0 0 10px var(--accent-gold), 0 0 20px var(--accent-gold), 0 0 30px var(--accent-gold);
     --header-gradient: linear-gradient(45deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
@@ -35,7 +36,7 @@ const GlobalStyle = createGlobalStyle`
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    padding: 0 2rem;
     color: var(--text-light);
     position: relative;
     overflow-x: hidden;
