@@ -4,13 +4,15 @@ import { Link } from 'react-router-dom';
 import SocialIcons from './SocialIcons';
 import logo from '../assets/images/logo.svg';
 import logo2 from '../assets/images/logo-2.svg';
+import lineIcon from '../assets/images/line-svg.svg';
+
 
 const HeaderContainer = styled.header`
   width: 100vw;
   background-color: #0A0A0A;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
 `;
 
 const HeaderContent = styled.div`
@@ -84,6 +86,19 @@ const MenuItem = styled(Link)`
   }
 `;
 
+const LineImage = styled.img`
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  height: 25px;
+
+  @media (max-width: 768px) {
+    height: 15px;
+  }
+`;
+
 const Header = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
@@ -112,6 +127,7 @@ const Header = () => {
         </Menu>
         <SocialIcons />
       </HeaderContent>
+      <LineImage src={lineIcon} alt="Line" />
     </HeaderContainer>
   );
 };
