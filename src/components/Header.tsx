@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import SocialIcons from './SocialIcons';
@@ -8,7 +8,6 @@ import logo2 from '../assets/images/logo-2.svg';
 const HeaderContainer = styled.header`
   width: 100vw;
   background-color: #0A0A0A;
-  position: sticky;
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);

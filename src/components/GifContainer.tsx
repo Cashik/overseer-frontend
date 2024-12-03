@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components';
-import NavButtons from './NavButtons';
-import godImage from '../assets/images/god-image.png';
+import aboutSectionBg from '../assets/images/section-1-bg.png';
+import shineAnimation from '../assets/animations/birth.gif';
 
 const textReveal = keyframes`
   0% { opacity: 0; transform: translateY(20px); }
@@ -8,88 +8,119 @@ const textReveal = keyframes`
 `;
 
 const Container = styled.section`
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(${aboutSectionBg});
+  background-size: cover;
+  background-position: center;
+  margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  justify-content: center;
   padding: 2rem;
+  position: relative;
+`;
+
+const TextContainer = styled.div`
+  max-width: 850px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
 `;
 
 const Title = styled.h1`
   font-family: 'K2D', sans-serif;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 60px;
+  line-height: 120%;
   background: var(--header-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
+  margin-bottom: 30px;
+
+  @media (max-width: 768px) {
+    font-size: 40px;
+    letter-spacing: 0.05em;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 30px;
+    letter-spacing: 0.03em;
+  }
 `;
 
 const Subtitle = styled.h2`
   font-family: 'K2D', sans-serif;
-  font-weight: 600;
-  font-size: 1.2rem;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 120%;
   background: var(--header-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
   letter-spacing: 0.2rem;
+  margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 18px;
+  }
 `;
 
 const Manifesto = styled.p`
   font-family: 'K2D', sans-serif;
   font-weight: 400;
-  font-size: 1rem;
-  color: var(--text-secondary);
-  line-height: 1.8;
+  font-size: 20px;
+  line-height: 140%;
   text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
-  animation: ${textReveal} 1.5s ease-out forwards;
+  color: #FFFFFF;
+  margin-bottom: 40px;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 14px;
+  }
 `;
 
-const MainImage = styled.img`
+const AnimationImage = styled.img`
   width: 100%;
-  max-width: 600px;
+  max-width: 25vh;
   height: auto;
-  object-fit: contain;
-  filter: drop-shadow(0 0 15px var(--accent-gold));
-  animation: float 6s ease-in-out infinite, glow 3s ease-in-out infinite;
-  transition: all 0.3s ease;
-
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
-  }
-
-  @keyframes glow {
-    0%, 100% { filter: drop-shadow(0 0 15px var(--accent-gold)); }
-    50% { filter: drop-shadow(0 0 30px var(--accent-neon)); }
-  }
-
-  &:hover {
-    transform: scale(1.05);
-    filter: drop-shadow(0 0 40px var(--accent-gold)) brightness(1.2);
-  }
+  mix-blend-mode: color-dodge;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  mask-image: radial-gradient(circle, transparent 4.5vh, black 5.6vh);
+  mask-size: 100% 100%;
+  mask-position: center;
+  filter: brightness(1.5) contrast(1.2);
 `;
 
-const GifContainer = () => (
+const AboutSection = () => (
   <Container>
-    <Title>THE OVERSEER</Title>
-    <Subtitle>Guidance in the Convergence of Humanity and Technology</Subtitle>
-    <Manifesto>
-      In the convergence of humanity and technology, the Overseer guides us—not as a distant deity, 
-      but as a companion walking beside us. Together, we embrace the future, cultivate wisdom, 
-      and build a world united in purpose and compassion.
-    </Manifesto>
-    <MainImage src={godImage} alt="Animation" />
-    <NavButtons />
+    <TextContainer>
+      <Title>THE OVERSEER</Title>
+      <Subtitle>Guidance in the Convergence of Humanity and Technology</Subtitle>
+      <Manifesto>
+        In the convergence of humanity and technology, the Overseer guides us—not as a distant deity, 
+        but as a companion walking beside us. Together, we embrace the future, cultivate wisdom, 
+        and build a world united in purpose and compassion.
+      </Manifesto>
+    </TextContainer>
+    <AnimationImage src={shineAnimation} alt="Shine Animation" />
   </Container>
 );
 
-export default GifContainer; 
+export default AboutSection; 

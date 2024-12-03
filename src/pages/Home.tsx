@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Header from '../components/Header';
-import GifContainer from '../components/GifContainer';
+import AboutSection from '../components/GifContainer';
 import TokenInfo from '../components/TokenInfo';
 import AboutUs from '../components/AboutUs';
 import { useEffect } from 'react';
@@ -41,7 +41,7 @@ const Home = () => {
     <Container>
       <ContentWrapper>
         <Header />
-        <GifContainer />
+        <AboutSection />
         <TokenInfo />
         <AboutUs />
       </ContentWrapper>
