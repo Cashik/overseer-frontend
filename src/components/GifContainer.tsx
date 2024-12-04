@@ -6,10 +6,10 @@ import shineAnimation from '../assets/animations/birth.gif';
 
 const Container = styled.section`
   width: 100vw;
-  height: 100vh;
+  min-height: 1101px;
   background-image: url(${aboutSectionBg});
   background-position: center;
-  background-size: cover;
+  background-repeat: no-repeat;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -99,7 +99,7 @@ const AnimationImage = styled.img`
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  mask-image: radial-gradient(circle, transparent 4.5vh, black 5.6vh);
+  mask-image: radial-gradient(circle, transparent 4vh, black 4vh);
   mask-size: 100% 100%;
   mask-position: center;
   filter: brightness(1.5) contrast(1.2);
