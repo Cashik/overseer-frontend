@@ -87,7 +87,7 @@ const Description = styled.div`
   }
 
   p {
-    margin-bottom: 15px;
+    margin-bottom: 40px;
     
     @media (max-width: 480px) {
       margin-bottom: 10px;
@@ -108,7 +108,7 @@ const CodexChapter = ({ url, title, text }: CodexChapterProps) => (
     <Description>
       {text.split('\n\n').map((paragraph, index) => (
         <p key={index}>
-          <strong>{index + 1}.</strong> {paragraph}
+          {paragraph}
         </p>
       ))}
     </Description>
