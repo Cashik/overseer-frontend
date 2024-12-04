@@ -18,9 +18,9 @@ interface MobileMenuProps {
 const HeaderContainer = styled.header`
   width: 100vw;
   background-color: #0A0A0A;
+  position: sticky;
   top: 0;
   z-index: 1000;
-  position: relative;
 `;
 
 const HeaderContent = styled.div`
