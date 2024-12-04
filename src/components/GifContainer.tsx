@@ -2,17 +2,14 @@ import styled, { keyframes } from 'styled-components';
 import aboutSectionBg from '../assets/images/section-1-bg.png';
 import shineAnimation from '../assets/animations/birth.gif';
 
-const textReveal = keyframes`
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
-`;
+
 
 const Container = styled.section`
   width: 100vw;
   height: 100vh;
   background-image: url(${aboutSectionBg});
-  background-size: cover;
   background-position: center;
+  background-size: cover;
   margin: 0;
   display: flex;
   flex-direction: column;

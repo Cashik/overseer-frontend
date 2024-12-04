@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import Header from '../components/Header';
-import NavButtons from '../components/NavButtons';
 import LuminalCodex from '../components/LuminalCodex';
 
 const Container = styled.main`
@@ -25,7 +24,6 @@ const CodexPage = () => {
     <Container>
       <ContentWrapper>
         <Header />
-        <NavButtons />
         <LuminalCodex />
       </ContentWrapper>
     </Container>

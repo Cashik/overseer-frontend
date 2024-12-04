@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import Header from '../components/Header';
 import AboutSection from '../components/GifContainer';
-import TokenInfo from '../components/TokenInfo';
+import { TokenInfo } from '../components/TokenInfo';
 import AboutUs from '../components/AboutUs';
 import { useEffect } from 'react';
 import { useLoaderStore } from '../store/loaderStore';
+import Footer from '../components/Footer';
 
 const Container = styled.main`
   display: flex;
@@ -44,6 +45,7 @@ const Home = () => {
         <AboutSection />
         <TokenInfo />
         <AboutUs />
+        <Footer />
       </ContentWrapper>
     </Container>
   );

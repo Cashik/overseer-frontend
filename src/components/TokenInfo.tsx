@@ -1,105 +1,88 @@
-import styled, { keyframes } from 'styled-components';
-import tokenIcon from '/src/assets/images/icons/token-icon.png';
+import styled from 'styled-components';
+import tokenInfoBg from '../assets/images/token-info-bg.png';
+import lineIcon from '../assets/images/line-svg.svg';
 
-const glowText = keyframes`
-  0% { text-shadow: 0 0 5px var(--accent-neon); }
-  50% { text-shadow: 0 0 15px var(--accent-neon), 0 0 25px var(--accent-neon); }
-  100% { text-shadow: 0 0 5px var(--accent-neon); }
-`;
-
-const TokenIcon = styled.img`
-  width: 2.5rem;
-  height: 2.5rem;
-`;
-
-const TokenContainer = styled.div`
-  margin-top: 4rem;
-  text-align: center;
-  padding: 2rem;
-  background: rgba(10, 15, 44, 0.4);
-  border: 1px solid var(--accent-neon);
-  backdrop-filter: blur(5px);
-  max-width: 800px;
+const Section = styled.section`
   width: 100%;
-  position: relative;
-
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    border: 1px solid var(--accent-neon);
-  }
-
-  &::before {
-    top: -5px;
-    left: -5px;
-    border-right: none;
-    border-bottom: none;
-  }
-
-  &::after {
-    bottom: -5px;
-    right: -5px;
-    border-left: none;
-    border-top: none;
-  }
-
-  @media (max-width: 768px) {
-    margin-top: 1rem;
-    padding: 1rem;
-  }
-`;
-
-const TokenTitle = styled.h2`
-  font-family: 'RetroComputer', 'Press Start 2P', monospace, sans-serif;
-  font-size: 2rem;
-  color: var(--accent-gold);
-  margin-bottom: 1.5rem;
-  animation: ${glowText} 2s infinite;
+    max-width: 1200px;
+  height: 790px;
+  text-align: center;
+  padding: 4rem 2rem;
+  background-image: url(${tokenInfoBg});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 1rem;
-
-  svg {
-    font-size: 2.5rem;
-  }
-
-  @media (max-width: 768px) {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    gap: 0.5rem;
-  }
-`;
-
-const TokenDescription = styled.p`
-  font-family: 'RetroComputer', 'Press Start 2P', monospace, sans-serif;
-  font-size: 1rem;
-  color: var(--text-light);
-  line-height: 2;
-  max-width: 600px;
+  position: relative;
   margin: 0 auto;
-  opacity: 0.9;
+`;
+
+const Title = styled.h1`
+  font-family: 'K2D', sans-serif;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 120%;
+  background: var(--header-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 30px;
 
   @media (max-width: 768px) {
-    font-size: 0.7rem;
-    line-height: 1.6;
-    padding: 0 0.5rem;
+    font-size: 40px;
+    letter-spacing: 0.05em;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 30px;
+    letter-spacing: 0.03em;
   }
 `;
 
-const TokenInfo = () => (
-  <TokenContainer>
-    <TokenTitle>
-      <TokenIcon src={tokenIcon} alt="OVERSEER" />
-      $OVERSEER
-    </TokenTitle>
-    <TokenDescription>
-      The token of our new religion. A cornerstone of our unity. A signal of brotherhood. A path to our future.
-    </TokenDescription>
-  </TokenContainer>
+const Description = styled.p`
+  font-family: 'K2D', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  text-align: center;
+  color: #FFFFFF;
+  margin-bottom: 40px;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 14px;
+  }
+`;
+
+const LineImage = styled.img`
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  height: 25px;
+
+  @media (max-width: 768px) {
+    height: 15px;
+  }
+`;
+
+export const TokenInfo = () => (
+  <Section>
+    <Title>$OVERSEER</Title>
+    <Description>
+      The token of our new religion. A cornerstone of our unity.<br />
+      A signal of brotherhood. A path to our future.
+    </Description>
+    <LineImage src={lineIcon} alt="Line" />
+  </Section>
 );
 
-export default TokenInfo; 
+export default TokenInfo;
