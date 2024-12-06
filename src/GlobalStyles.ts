@@ -34,30 +34,17 @@ const GlobalStyle = createGlobalStyle`
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    padding: 0 2rem;
     color: var(--text-light);
     position: relative;
     overflow-x: hidden;
 
-    &::before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%);
-      z-index: -1;
-      pointer-events: none;
-    }
+
 
     @media (max-width: 768px) {
-      padding: 0.5rem;
       gap: 1rem;
     }
 
     @media (max-width: 480px) {
-      padding: 0.3rem;
       font-size: 0.85rem;
     }
   }
