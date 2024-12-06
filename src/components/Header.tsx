@@ -258,6 +258,7 @@ const Header = () => {
           <MenuItem to="/docs">Docs</MenuItem>
           <MenuItem to="/wallet">Wallet</MenuItem>
           <MenuItem to="/faq">FAQ</MenuItem>
+          <MenuItem to="/tenets">Tenets</MenuItem>
         </Menu>
         <SocialIconsWrapper>
           <SocialIcons />

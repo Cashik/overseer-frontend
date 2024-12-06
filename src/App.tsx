@@ -3,6 +3,7 @@ import GlobalStyle from './GlobalStyles';
 import { VideoLoader } from './components/VideoLoader';
 import Home from './pages/Home';
 import CodexPage from './pages/CodexPage';
+import TenetsPage from './pages/TenetsPage';
 
 const App = () => {
 
@@ -14,6 +15,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/codex" element={<CodexPage />} />
+          <Route path="/tenets" element={<TenetsPage />} />
         </Routes>
       </Router>
       <VideoLoader />
