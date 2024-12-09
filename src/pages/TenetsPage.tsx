@@ -12,6 +12,7 @@ import tenets6 from '../assets/images/tenets/6.svg';
 import ball from '../assets/images/tenets/ball.png';
 import Header from '../components/Header';
 import shineAnimation from '../assets/animations/birth.gif';
+import { Subtitle, Title, Text } from '../GlobalStyles';
 
 // Добавляем анимации
 const fadeIn = keyframes`
@@ -102,84 +103,10 @@ const TextContainer = styled.div.attrs<TextContainerProps>(props => ({
   }
 `;
 
-const Title = styled.h1`
-  font-family: 'K2D', sans-serif;
-  font-weight: 700;
-  font-size: 60px;
-  line-height: 120%;
-  background: var(--header-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-align: center;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin:0;
-  margin-bottom: 30px;
 
-  @media (max-width: 768px) {
-    font-size: 40px;
-    letter-spacing: 0.05em;
-    margin-bottom: 20px;
-  }
 
-  @media (max-width: 480px) {
-    font-size: 30px;
-    letter-spacing: 0.03em;
-    margin-bottom: 15px;
-  }
-`;
 
-const Subtitle = styled.h2`
 
-font-family: 'Mongolian Baiti';
-font-style: normal;
-font-weight: 400;
-  font-size: 32px;
-  line-height: 140%;
-  background: var(--header-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-align: center;
-  letter-spacing: 0.2rem;
-  margin-bottom: 20px;
-
-  @media (max-width: 768px) {
-    font-size: 24px;
-    margin-bottom: 15px;
-    letter-spacing: 0.15rem;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 18px;
-    margin-bottom: 10px;
-    letter-spacing: 0.1rem;
-  }
-`;
-
-const Manifesto = styled.p`
-
-font-family: 'K2D';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 140%;
-leading-trim: both;
-text-edge: cap;
-text-align: center;
-color: #FFFFFF;
-
-  margin-bottom: 40px;
-
-  @media (max-width: 768px) {
-    font-size: 16px;
-    margin-bottom: 30px;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 14px;
-    margin-bottom: 20px;
-  }
-`;
 
 const GlowEffect = styled.div`
   position: absolute;
@@ -228,10 +155,10 @@ const TenetsPage: React.FC = () => {
                         <Title>Tenets</Title>
                         <img src={tenets1} alt="tenets1" />
                         <Subtitle>1. Thou shalt seek balance in all things.</Subtitle>
-                        <Manifesto>
+                        <Text>
                             Embrace both light and shadow, joy and sorrow, chaos and order. <br />
                             In balance lies the answer.
-                        </Manifesto>
+                        </Text>
                     </TextContainer>
                 </ContentWrapper>
                 <BallWithAnimation>
@@ -246,43 +173,43 @@ const TenetsPage: React.FC = () => {
                     <TextContainer delay="0.7s">
                         <img src={tenets2} alt="tenets2" />
                         <Subtitle>2. Thou shalt honor the communion of all life.</Subtitle>
-                        <Manifesto>
+                        <Text>
                             Know that all beings are part of the same whole, and harm none, for in harming others, <br />
                             thou harm thyself.
-                        </Manifesto>
+                        </Text>
                     </TextContainer>
 
                     <TextContainer delay="0.9s">
                         <img src={tenets3} alt="tenets3" />
                         <Subtitle>3. Thou shalt yearn for wisdom and knowledge.</Subtitle>
-                        <Manifesto>
+                        <Text>
                             Seek understanding in every experience, for a true master is an eternal student. <br />
                             The pursuit of truth illuminates the path.
-                        </Manifesto>
+                        </Text>
                     </TextContainer>
 
                     <TextContainer delay="1.1s">
                         <img src={tenets4} alt="tenets4" />
                         <Subtitle>4. Thou shalt adapt to the flow of life.</Subtitle>
-                        <Manifesto>
+                        <Text>
                             Resist not change, but bend with the winds of fate, for only the flexible shall endure.
-                        </Manifesto>
+                        </Text>
                     </TextContainer>
 
                     <TextContainer delay="1.3s">
                         <img src={tenets5} alt="tenets5" />
                         <Subtitle>5. Thou shalt not cling to the past nor fear the future.</Subtitle>
-                        <Manifesto>
+                        <Text>
                             Live in the present moment, for it is the only time thou canst truly influence.
-                        </Manifesto>
+                        </Text>
                     </TextContainer>
 
                     <TextContainer delay="1.5s">
                         <img src={tenets6} alt="tenets6" />
                         <Subtitle>6. Thou shalt trust the journey, for it is eternal.</Subtitle>
-                        <Manifesto>
+                        <Text>
                             Walk the path with faith, for life and death are but steps in an endless cycle of growth.
-                        </Manifesto>
+                        </Text>
                     </TextContainer>
                 </ContentWrapper>
             </TenetsBackground>

@@ -259,6 +259,7 @@ const Header = () => {
           <MenuItem to="/wallet">Wallet</MenuItem>
           <MenuItem to="/faq">FAQ</MenuItem>
           <MenuItem to="/tenets">Tenets</MenuItem>
+          <MenuItem to="/journey">Journey</MenuItem>
         </Menu>
         <SocialIconsWrapper>
           <SocialIcons />
@@ -291,6 +292,7 @@ const Header = () => {
           <MobileMenuItem to="/docs" onClick={() => setIsMenuOpen(false)}>Docs</MobileMenuItem>
           <MobileMenuItem to="/wallet" onClick={() => setIsMenuOpen(false)}>Wallet</MobileMenuItem>
           <MobileMenuItem to="/faq" onClick={() => setIsMenuOpen(false)}>FAQ</MobileMenuItem>
+          <MobileMenuItem to="/journey" onClick={() => setIsMenuOpen(false)}>Journey</MobileMenuItem>
           <SocialIcons />
         </MobileMenu>
       </HeaderContent>

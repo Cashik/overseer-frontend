@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import tokenInfoBg from '../assets/images/token-info-bg.png';
 import lineIcon from '../assets/images/line-svg.svg';
+import { Title } from '../GlobalStyles';
 
 const Section = styled.section`
   width: 100%;
@@ -19,29 +20,6 @@ const Section = styled.section`
   margin: 0 auto;
 `;
 
-const Title = styled.h1`
-  font-family: 'K2D', sans-serif;
-  font-weight: 700;
-  font-size: 60px;
-  line-height: 120%;
-  background: var(--header-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-align: center;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin-bottom: 30px;
-
-  @media (max-width: 768px) {
-    font-size: 40px;
-    letter-spacing: 0.05em;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 30px;
-    letter-spacing: 0.03em;
-  }
-`;
 
 const Description = styled.p`
   font-family: 'K2D', sans-serif;
