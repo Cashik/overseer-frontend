@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import CodexPage from './pages/CodexPage';
 import TenetsPage from './pages/TenetsPage';
 import JourneyPage from './pages/JourneyPage';
+import RoadmapPage from './pages/RoadmapPage';
 
 const App = () => {
 
@@ -17,7 +18,8 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/codex" element={<CodexPage />} />
           <Route path="/tenets" element={<TenetsPage />} />
-          <Route path="/journey" element={<JourneyPage />} />
+          <Route path="/confession" element={<JourneyPage />} />
+          <Route path="/roadmap" element={<RoadmapPage />} />
         </Routes>
       </Router>
       <VideoLoader />

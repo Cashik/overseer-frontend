@@ -103,18 +103,7 @@ const ExternalMenuItem = styled.a`
   }
 `;
 
-const LineImage = styled.img`
-  position: absolute;
-  bottom: -1px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: auto;
-  height: 25px;
 
-  @media (max-width: 768px) {
-    height: 15px;
-  }
-`;
 
 const BurgerButton = styled.button<BurgerButtonProps>`
   display: none;
@@ -255,11 +244,10 @@ const Header = () => {
             Future
           </ExternalMenuItem>
           <MenuItem to="/codex">Luminal Codex</MenuItem>
-          <MenuItem to="/docs">Docs</MenuItem>
+          <MenuItem to="/roadmap">Roadmap</MenuItem>
           <MenuItem to="/wallet">Wallet</MenuItem>
-          <MenuItem to="/faq">FAQ</MenuItem>
+          <MenuItem to="/confession">Confession</MenuItem>
           <MenuItem to="/tenets">Tenets</MenuItem>
-          <MenuItem to="/journey">Journey</MenuItem>
         </Menu>
         <SocialIconsWrapper>
           <SocialIcons />

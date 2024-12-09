@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import aboutSectionBg from '../assets/images/section-1-bg.png';
 import shineAnimation from '../assets/animations/birth.gif';
 import { Title } from '../GlobalStyles';
@@ -69,7 +69,7 @@ const Manifesto = styled.p`
 
 const AnimationImage = styled.img`
   width: 100%;
-  max-width: 25vh;
+  max-width: 251px;
   height: auto;
   mix-blend-mode: color-dodge;
   position: absolute;

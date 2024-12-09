@@ -86,6 +86,7 @@ const GlobalStyle = createGlobalStyle`
   :root {
     --background-color: #0A0A0A;
     --active-color: #FFEF99;
+    --border-color: #FFEF99;
     --primary-dark: #000000;
     --primary-light: #1A1A1A;
     --accent-neon: #FFB800;

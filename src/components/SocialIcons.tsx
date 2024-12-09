@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import dexIcon from '../assets/images/dex.png';
-import dextoolsIcon from '../assets/images/DT-fc.png';
+// import dexIcon from '../assets/images/dex.png';
+// import dextoolsIcon from '../assets/images/DT-fc.png';
 
 import discordIcon from '../assets/images/icons/socials-icons/discord-icon.svg';
 import twitterIcon from '../assets/images/icons/socials-icons/x-icon.svg';
