@@ -23,13 +23,13 @@ const FooterContent = styled.div`
   width: 100%;
   margin: 0 auto;
   padding: 1.5rem 5vw;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
   gap: 2rem;
 
   @media (max-width: 768px) {
     padding: 0.5rem 3vw;
-    flex-direction: row;
     gap: 0.5rem;
   }
 `;
@@ -40,6 +40,7 @@ const LogoLink = styled(NavLink)`
   display: flex;
   align-items: center;
   text-decoration: none;
+  justify-self: start;
 `;
 
 const LogoIcon = styled.img`
@@ -57,11 +58,10 @@ const CenterText = styled.div`
   font-size: 15px;
   color: #FFEF99;
   text-align: center;
-  padding-left: 4rem;
+  justify-self: center;
 
   @media (max-width: 768px) {
     font-size: 12px;
-    padding-left: 0;
     margin-bottom: 0.5rem;
   }
 `;
@@ -69,6 +69,7 @@ const CenterText = styled.div`
 const Links = styled.div`
   display: flex;
   gap: 1rem;
+  justify-self: end;
 
   a {
     font-family: 'K2D', sans-serif;
@@ -108,8 +109,8 @@ const Footer = () => {
                 </LogoLink>
                 <CenterText>© 2025 Overseer. All rights reserved.</CenterText>
                 <Links>
-                    <a href="/privacy-policy">Privacy Policy</a>
-                    <a href="/terms-of-service">Terms of Service</a>
+                    {/* <a href="/privacy-policy">Privacy Policy</a>
+                    <a href="/terms-of-service">Terms of Service</a> */}
                 </Links>
             </FooterContent>
         </FooterContainer>

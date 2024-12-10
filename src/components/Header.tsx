@@ -1,4 +1,4 @@
-import  { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { NavLink, Link } from 'react-router-dom';
 import SocialIcons from './SocialIcons';
@@ -175,7 +175,6 @@ const MobileMenu = styled.div<MobileMenuProps>`
       gap: 2.5rem;
 
       a {
-        transform: scale(3);
         
         svg {
           width: 32px;
@@ -229,30 +228,31 @@ const Header = () => {
           <LogoIcon src={isMobile ? logo2 : logo} alt="Logo" />
         </LogoLink>
         <Menu>
-          <ExternalMenuItem 
+          {/* <ExternalMenuItem
             href="https://x.com/TheOverseer_x/status/1860844357361795425"
             target="_blank"
             rel="noopener noreferrer"
           >
             Birth
           </ExternalMenuItem>
-          <ExternalMenuItem 
+          <ExternalMenuItem
             href="https://x.com/aiagentz/status/1862491315025715416"
             target="_blank"
             rel="noopener noreferrer"
           >
             Future
-          </ExternalMenuItem>
-          <MenuItem to="/codex">Luminal Codex</MenuItem>
-          <MenuItem to="/roadmap">Roadmap</MenuItem>
-          <MenuItem to="/wallet">Wallet</MenuItem>
-          <MenuItem to="/confession">Confession</MenuItem>
+          </ExternalMenuItem> */}
+          <MenuItem to="/">Home</MenuItem>
+          <MenuItem to="/codex">Codex</MenuItem>
           <MenuItem to="/tenets">Tenets</MenuItem>
+          <MenuItem to="/pamphlet">Pamphlet</MenuItem>
+          <MenuItem to="/roadmap">Roadmap</MenuItem>
+          {/* <MenuItem to="/wallet">Wallet</MenuItem> */}
         </Menu>
         <SocialIconsWrapper>
           <SocialIcons />
         </SocialIconsWrapper>
-        
+
         <BurgerButton onClick={toggleMenu} isOpen={isMenuOpen}>
           <div />
           <div />
@@ -260,7 +260,7 @@ const Header = () => {
         </BurgerButton>
 
         <MobileMenu isOpen={isMenuOpen}>
-          <ExternalMenuItem 
+          {/* <ExternalMenuItem
             href="https://x.com/TheOverseer_x/status/1860844357361795425"
             target="_blank"
             rel="noopener noreferrer"
@@ -268,19 +268,19 @@ const Header = () => {
           >
             Birth
           </ExternalMenuItem>
-          <ExternalMenuItem 
+          <ExternalMenuItem
             href="https://x.com/aiagentz/status/1862491315025715416"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setIsMenuOpen(false)}
           >
             Future
-          </ExternalMenuItem>
-          <MobileMenuItem to="/codex" onClick={() => setIsMenuOpen(false)}>Luminal Codex</MobileMenuItem>
-          <MobileMenuItem to="/docs" onClick={() => setIsMenuOpen(false)}>Docs</MobileMenuItem>
-          <MobileMenuItem to="/wallet" onClick={() => setIsMenuOpen(false)}>Wallet</MobileMenuItem>
-          <MobileMenuItem to="/faq" onClick={() => setIsMenuOpen(false)}>FAQ</MobileMenuItem>
-          <MobileMenuItem to="/journey" onClick={() => setIsMenuOpen(false)}>Journey</MobileMenuItem>
+          </ExternalMenuItem> */}
+          <MobileMenuItem to="/" onClick={() => setIsMenuOpen(false)}>Home</MobileMenuItem>
+          <MobileMenuItem to="/codex" onClick={() => setIsMenuOpen(false)}>Codex</MobileMenuItem>
+          <MobileMenuItem to="/tenets" onClick={() => setIsMenuOpen(false)}>Tenets</MobileMenuItem>
+          <MobileMenuItem to="/pamphlet" onClick={() => setIsMenuOpen(false)}>Pamphlet</MobileMenuItem>
+          <MobileMenuItem to="/roadmap" onClick={() => setIsMenuOpen(false)}>Roadmap</MobileMenuItem>
           <SocialIcons />
         </MobileMenu>
       </HeaderContent>

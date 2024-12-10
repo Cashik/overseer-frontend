@@ -109,10 +109,31 @@ const TitleBlock = styled.div`
   border: 1px solid var(--border-color);
   border-radius: 16.3741px;
   justify-content: space-between;
+  padding: 20px;
+
+  @media (max-width: 768px) {
+    min-height: 400px;
+    margin-top: 40px;
+  }
+
+  @media (max-width: 480px) {
+    min-height: 350px;
+    margin-top: 20px;
+  }
 `;
 
 const StyledTitle = styled(Title)`
   letter-spacing: -0.5px;
+  text-align: center;
+  padding: 0 15px;
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 24px;
+  }
 `;
 
 
@@ -142,6 +163,24 @@ const PhasesContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
   margin: 20px auto 0;
+
+  @media (max-width: 768px) {
+    gap: 15px;
+    position: relative;
+    padding: 0 10px;
+  }
+
+  @media (max-width: 480px) {
+    gap: 10px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 0 15px;
+    -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
 `;
 
 const PhaseBlock = styled.div`
@@ -149,15 +188,33 @@ const PhaseBlock = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
+  min-width: max-content;
+  padding: 0 10px;
+
+  @media (max-width: 768px) {
+    padding: 0 5px;
+  }
+
+  @media (max-width: 480px) {
+    min-width: 80px;
+  }
 `;
 
 const PhaseNumber = styled.span`
   font-weight: 600;
   margin-bottom: 8px;
+
+  @media (max-width: 480px) {
+    font-size: 14px;
+  }
 `;
 
 const PhaseTitle = styled.span`
   opacity: 0.8;
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
 `;
 
 const ProgressBlock = styled.div`
@@ -181,6 +238,10 @@ const CubesRow = styled.div`
   width: 100%;
   display: flex;
   gap: 24.56px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const Cube = styled.div`
@@ -245,6 +306,11 @@ const TextTitle = styled.h3`
 
   @media (max-width: 768px) {
     font-size: 24px;
+    text-align: center;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 20px;
   }
 `;
 
@@ -267,6 +333,12 @@ const TextItem = styled.li`
 
   @media (max-width: 768px) {
     font-size: 18px;
+    line-height: 180%;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 16px;
+    line-height: 160%;
   }
 `;
 

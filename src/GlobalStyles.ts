@@ -31,29 +31,29 @@ text-fill-color: transparent;
 `;
 
 export const Subtitle = styled.h2`
-font-family: 'Mongolian Baiti';
+font-family: 'K2D';
 font-style: normal;
 font-weight: 400;
-  font-size: 32px;
-  line-height: 140%;
-  background: var(--header-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-align: center;
-  letter-spacing: 0.2rem;
-  margin-bottom: 20px;
+font-size: 32px;
+line-height: 140%;
+background: var(--header-gradient);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+text-align: center;
+letter-spacing: 0.2rem;
+margin-bottom: 20px;
 
-  @media (max-width: 768px) {
-    font-size: 24px;
-    margin-bottom: 15px;
-    letter-spacing: 0.15rem;
-  }
+@media (max-width: 768px) {
+  font-size: 24px;
+  margin-bottom: 15px;
+  letter-spacing: 0.15rem;
+}
 
-  @media (max-width: 480px) {
-    font-size: 18px;
-    margin-bottom: 10px;
-    letter-spacing: 0.1rem;
-  }
+@media (max-width: 480px) {
+  font-size: 18px;
+  margin-bottom: 10px;
+  letter-spacing: 0.1rem;
+}
 `;
 
 export const Text = styled.p`

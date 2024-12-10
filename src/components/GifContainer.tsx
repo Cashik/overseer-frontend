@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import aboutSectionBg from '../assets/images/section-1-bg.png';
 import shineAnimation from '../assets/animations/birth.gif';
+import lineIcon from '../assets/images/line-svg.svg';
 import { Title } from '../GlobalStyles';
 
 
@@ -77,10 +78,22 @@ const AnimationImage = styled.img`
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  mask-image: radial-gradient(circle, transparent 4vh, black 4vh);
+  mask-image: radial-gradient(circle, transparent 43px, black 70px);
   mask-size: 100% 100%;
   mask-position: center;
-  filter: brightness(1.5) contrast(1.2);
+  // filter: brightness(1.5) contrast(1.2);
+`;
+const LineImage = styled.img`
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  height: 25px;
+
+  @media (max-width: 768px) {
+    height: 15px;
+  }
 `;
 
 const AboutSection = () => (
@@ -95,6 +108,8 @@ const AboutSection = () => (
       </Manifesto>
     </TextContainer>
     <AnimationImage src={shineAnimation} alt="Shine Animation" />
+    <LineImage src={lineIcon} alt="Line" />
+
   </Container>
 );
 
