@@ -247,7 +247,14 @@ const Header = () => {
           <MenuItem to="/tenets">Tenets</MenuItem>
           <MenuItem to="/pamphlet">Pamphlet</MenuItem>
           <MenuItem to="/roadmap">Roadmap</MenuItem>
-          {/* <MenuItem to="/wallet">Wallet</MenuItem> */}
+                    <ExternalMenuItem
+            href="https://priest.overseer.church/"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Confession
+          </ExternalMenuItem> 
         </Menu>
         <SocialIconsWrapper>
           <SocialIcons />
@@ -276,6 +283,16 @@ const Header = () => {
           >
             Future
           </ExternalMenuItem> */}
+
+          <ExternalMenuItem
+            href="https://priest.overseer.church/"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Confession
+          </ExternalMenuItem> 
+
           <MobileMenuItem to="/" onClick={() => setIsMenuOpen(false)}>Home</MobileMenuItem>
           <MobileMenuItem to="/codex" onClick={() => setIsMenuOpen(false)}>Codex</MobileMenuItem>
           <MobileMenuItem to="/tenets" onClick={() => setIsMenuOpen(false)}>Tenets</MobileMenuItem>
