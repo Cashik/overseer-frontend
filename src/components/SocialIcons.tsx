@@ -75,7 +75,7 @@ const SocialIcons = () => (
     <Icon href="https://x.com/TheOverseer_x" target="_blank" delay="0s" style={{ transform: 'scale(1.5)' }}>
       <img src={twitterIcon} alt="Twitter/X" />
     </Icon>
-    <Icon href="https://t.me/TheOverseer_x" target="_blank" delay="0.2s" style={{ transform: 'scale(1.5)' }}>
+    <Icon href="https://t.me/OverseerPortal" target="_blank" delay="0.2s" style={{ transform: 'scale(1.5)' }}>
       <img src={telegramIcon} alt="Telegram" />
     </Icon>
     <Icon href="https://dexscreener.com/solana/cvb7rxbyvab6zyrw7edramwqo7crpj12qszjgbc6muub" target="_blank" delay="0.4s">
