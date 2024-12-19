@@ -76,13 +76,15 @@ const Description = styled.div`
   width: 100%;
   margin: 0 auto;
   margin-bottom: 40px;
+  word-break: break-word;
+  white-space: pre-wrap;
 
   @media (max-width: 768px) {
     font-size: 16px;
   }
 
   @media (max-width: 480px) {
-    font-size: 12px;
+    font-size: 14px;
     margin-bottom: 20px;
   }
 

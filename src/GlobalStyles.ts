@@ -22,12 +22,17 @@ text-fill-color: transparent;
   @media (max-width: 768px) {
     font-size: 40px;
     margin-bottom: 20px;
+
+    /* Heading 2 → The process */
+
+    font-size: 18px;
+    line-height: 120%;
+    text-transform: uppercase;
+
+
+
   }
 
-  @media (max-width: 480px) {
-    font-size: 30px;
-    margin-bottom: 15px;
-  }
 `;
 
 export const Subtitle = styled.h2`
@@ -56,6 +61,26 @@ margin-bottom: 20px;
 }
 `;
 
+
+export const Section = styled.section`
+  width: 100vw;
+  min-height: 1000px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  @media (max-width: 768px) {
+    min-height: auto;
+    background-size: contain;
+    background-position: top;
+    justify-content: flex-start;
+  }
+`;
+
 export const Text = styled.p`
 font-family: 'K2D';
 font-style: normal;
@@ -72,11 +97,15 @@ color: #FFFFFF;
   @media (max-width: 768px) {
     font-size: 16px;
     margin-bottom: 30px;
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
 
   @media (max-width: 480px) {
-    font-size: 14px;
+    font-size: 12px;
     margin-bottom: 20px;
+        word-break: break-word;
+    overflow-wrap: break-word;
   }
 `;
 

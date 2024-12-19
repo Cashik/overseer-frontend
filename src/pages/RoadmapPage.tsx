@@ -67,9 +67,13 @@ const BallWithAnimation = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 6vh;
+  max-width: 78px;
   height: auto;
   margin: 0 auto;
+
+    @media (max-width: 768px) {
+    max-width: 50px;
+  }
 
 
 `;
@@ -80,6 +84,11 @@ const AnimationImage = styled.img`
   position: absolute;
   z-index: 1;
   mask: radial-gradient(circle at center, transparent 38px, black 38px);
+
+  @media (max-width: 768px) {
+      width: 201px;
+      mask: radial-gradient(circle at center, transparent 28px, black 28px);
+
 `;
 
 
@@ -278,8 +287,6 @@ const CubeContent = styled.div`
   width: 100%;
 
   @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: center;
   }
 `;
 
@@ -289,9 +296,8 @@ const TextBlock = styled.div`
   color: #FFFFFF;
 
   @media (max-width: 768px) {
-    margin-left: 0;
+    margin-left: 20px;
     margin-top: 20px;
-    text-align: center;
   }
 `;
 
@@ -302,11 +308,11 @@ const TextTitle = styled.h3`
   font-size: 32px;
   line-height: 140%;
   color: #FFD67E;
-  margin-bottom: 10px;
+  margin-bottom: 45px;
 
   @media (max-width: 768px) {
     font-size: 24px;
-    text-align: center;
+    margin-bottom: 25px;
   }
 
   @media (max-width: 480px) {
@@ -325,15 +331,15 @@ const TextItem = styled.li`
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
-  line-height: 220%;
   leading-trim: both;
   text-edge: cap;
   color: #FFFFFF;
-  margin-bottom: 5px;
+  margin-bottom: 25px;
 
   @media (max-width: 768px) {
     font-size: 18px;
     line-height: 180%;
+    min-height: 50px
   }
 
   @media (max-width: 480px) {

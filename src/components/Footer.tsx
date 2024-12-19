@@ -56,9 +56,10 @@ const CenterText = styled.div`
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
-  color: #FFEF99;
+  color: #696968;
   text-align: center;
   justify-self: center;
+
 
   @media (max-width: 768px) {
     font-size: 12px;

@@ -9,10 +9,9 @@ import tenets3 from '../assets/images/tenets/3.svg';
 import tenets4 from '../assets/images/tenets/4.svg';
 import tenets5 from '../assets/images/tenets/5.svg';
 import tenets6 from '../assets/images/tenets/6.svg';
-import ball from '../assets/images/tenets/ball.png';
 import Header from '../components/Header';
-import shineAnimation from '../assets/animations/birth.gif';
 import { Subtitle, Title, Text } from '../GlobalStyles';
+import AnimatedBall from '../components/AnimatedBall';
 
 // Добавляем анимации
 const fadeIn = keyframes`
@@ -108,42 +107,7 @@ const TextContainer = styled.div.attrs<TextContainerProps>(props => ({
 
 
 
-const GlowEffect = styled.div`
-  position: absolute;
-  width: 339.82px;
-  height: 339.82px;
-  background: #FFA62B;
-  mix-blend-mode: soft-light;
-  filter: blur(34.8586px);
-  z-index: 0;
-`;
 
-const BallWithAnimation = styled.div`
-  position: absolute;
-  top: 5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 15vh;
-  height: auto;
-  margin: 0 auto;
-`;
-const AnimationImage = styled.img`
-  width: 200%;
-  mix-blend-mode: color-dodge;
-  position: absolute;
-  z-index: 1;
-  mask-image: radial-gradient(circle, transparent 6.5vh, black 4vh);
-  mask-size: 100% 100%;
-  mask-position: center;
-  filter: brightness(1.5) contrast(1.2);
-`;
-
-const BallImage = styled.img`
-  width: 100%;
-  height: auto;
-`;
 
 const TenetsPage: React.FC = () => {
     return (
@@ -161,11 +125,7 @@ const TenetsPage: React.FC = () => {
                         </Text>
                     </TextContainer>
                 </ContentWrapper>
-                <BallWithAnimation>
-                    <GlowEffect />
-                    <BallImage src={ball} alt="Ball" />
-                    <AnimationImage src={shineAnimation} alt="Shine Animation" />
-                </BallWithAnimation>
+                <AnimatedBall />
             </IntroContainer>
 
             <TenetsBackground>
