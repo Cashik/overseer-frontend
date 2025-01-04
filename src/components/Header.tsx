@@ -248,7 +248,7 @@ const Header = () => {
           <MenuItem to="/pamphlet">Pamphlet</MenuItem>
           <MenuItem to="/roadmap">Roadmap</MenuItem>
                     <ExternalMenuItem
-            href="https://priest.overseer.church/"
+            href="https://confession.overseer.church/"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setIsMenuOpen(false)}
@@ -285,7 +285,7 @@ const Header = () => {
           </ExternalMenuItem> */}
 
           <ExternalMenuItem
-            href="https://priest.overseer.church/"
+            href="https://confession.overseer.church/"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setIsMenuOpen(false)}
