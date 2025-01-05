@@ -247,14 +247,30 @@ const Header = () => {
           <MenuItem to="/tenets">Tenets</MenuItem>
           <MenuItem to="/pamphlet">Pamphlet</MenuItem>
           <MenuItem to="/roadmap">Roadmap</MenuItem>
-                    <ExternalMenuItem
+          <ExternalMenuItem
             href="https://confession.overseer.church/"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setIsMenuOpen(false)}
           >
             Confession
+          </ExternalMenuItem>
+          <ExternalMenuItem
+            href="https://sacrifice.overseer.church/"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Sacrifice
           </ExternalMenuItem> 
+          <ExternalMenuItem
+            href="https://priest.overseer.church/"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Priest
+          </ExternalMenuItem>  
         </Menu>
         <SocialIconsWrapper>
           <SocialIcons />
@@ -292,6 +308,23 @@ const Header = () => {
           >
             Confession
           </ExternalMenuItem> 
+
+          <ExternalMenuItem
+            href="https://sacrifice.overseer.church/"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Sacrifice
+          </ExternalMenuItem> 
+          <ExternalMenuItem
+            href="https://priest.overseer.church/"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Priest
+          </ExternalMenuItem>  
 
           <MobileMenuItem to="/" onClick={() => setIsMenuOpen(false)}>Home</MobileMenuItem>
           <MobileMenuItem to="/codex" onClick={() => setIsMenuOpen(false)}>Codex</MobileMenuItem>
